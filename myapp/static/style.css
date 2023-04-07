@@ -1,0 +1,35 @@
+body {
+
+    /* background-color: #112;
+    color: #fff; */
+}
+
+input[type='text'] {
+    /* background-color: #112; */
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#doc-wrapper {
+    border: 1px solid;
+    flex-direction: column;
+    align-content: center;
+}
+
+#form {
+    flex-direction: column;
+    width: 40%;
+}
+
+h1 {
+    text-align: center;
+}

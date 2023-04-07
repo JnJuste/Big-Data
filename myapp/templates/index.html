@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="doc-wrapper" class="container flex">
+        <h1>RECOMMENDATION STUDENT SYSTEM</h1>
+        <form action="prediction" method="post" style="margin-left: 21vw;">
+            {% csrf_token %}
+            <div style="display: inline;">Choose Your Combination Code:   </div>
+            <select  id="" name="comb code" required>
+                <option selected disabled value="">Combination Code...</option>
+                <option value=1>MCB</option>
+                <option value=2>PCM</option>
+                <option value=3>MPG</option>
+                <option value=4>MCE</option>
+                <option value=5>MEG</option>
+                <option value=6>PCB</option>
+                <option value=7>BCG</option>
+                <option value=8>LEG</option>
+                <option value=9>HEG</option>
+                <option value=10>HLG</option>
+                <option value=11>EKK</option>
+                <option value=12>Computer Applications</option>
+                <option value=13>Software Engineering</option>
+                <option value=14>Networking</option>
+                <option value=15>Multimedia</option>
+                <option value=16>Telecom</option>
+              </select>
+            <div style="display: inline;">Enter Your Grade:   </div>
+            <input type="number" name="grade" id="" required>
+            
+            <button type="submit" style="background-color: green;">Predict</button>
+        </form>
+        <div>
+            {{prediction}}
+        </div>
+    </div>
+</body>
+</html>
